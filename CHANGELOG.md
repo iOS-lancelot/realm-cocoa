@@ -7,6 +7,7 @@ x.x.x Release notes (yyyy-MM-dd)
 * Sync-related error reporting behavior has been changed. Errors not related
   to a particular user or session are only reported if they are classed as
   'fatal' by the underlying sync engine.
+* Designate `id` properties of the `PermissionChange` to be a primary key.
 
 ### API Breaking Changes
 
@@ -39,6 +40,9 @@ x.x.x Release notes (yyyy-MM-dd)
   constructor, which you can then safely pass to another thread to resolve in
   the new Realm with `-[RLMRealm resolveThreadSafeReference:]`/`Realm.resolve(_:)`.
 * Realm collections can now be sorted by properties over to-one relationships.
+* Add `SyncPermissionOffer` and `SyncPermissionOfferResponse` classes to allow
+  creating and accepting permission change events to synchronized Realms between
+  different users.
 
 ### Bugfixes
 
